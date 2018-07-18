@@ -36,6 +36,8 @@ void MyGame::Update(const DX::StepTimer& timer) {
 
 	// プレイヤを更新する Update Player object
 	this->player->Update(timer);
+
+	air->Update(timer);
 }
 
 // シーンを描画する Draws scene
@@ -53,7 +55,7 @@ void MyGame::Render(const DX::StepTimer& timer) {
 
 	// Playerオブジェクトを描画する Render Player object
 	this->player->Render(timer, spriteBatch.get());
-
+	this->air->Render(timer, spriteBatch.get());
 	// 描画を終える Finish rendering
 	spriteBatch->End();
 	// バックバッファをスクリーンに送る Presents the back buffer contents to the screen

@@ -71,6 +71,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>C:\DirectXTK\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\DirectXTK\Bin\Desktop_2015\Win32\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -90,7 +91,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>C:\DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -174,6 +175,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="BulletFactory.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="Turret.h" />
     <ClInclude Include="MyGame.h" />
@@ -190,9 +192,16 @@
     <ClCompile Include="BulletCommand.cpp" />
     <ClCompile Include="BulletFactory.cpp" />
     <ClCompile Include="Cannon.cpp" />
+    <ClCompile Include="CommandMoveBackward.cpp" />
+    <ClCompile Include="CommandMoveForward.cpp" />
+    <ClCompile Include="CommandShotBomb.cpp" />
+    <ClCompile Include="CommandShotNormal.cpp" />
+    <ClCompile Include="CommandShotNWay.cpp" />
+    <ClCompile Include="CommandTurnLeft.cpp" />
+    <ClCompile Include="CommandTurnRight.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphics.cpp" />
-    <ClCompile Include="TankCommand.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Normal.cpp" />
     <ClCompile Include="Bomb.cpp" />
     <ClCompile Include="NWay.cpp" />

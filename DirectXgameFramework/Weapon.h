@@ -11,25 +11,28 @@
 #include "BulletFactory.h"
 #include "Air.h"
 
-class Weapon {
+class Weapon 
+{
 public:
+	//武器の種類
 	enum ID { NORMAL, NWAY, BOMB };
 	// 初期化する
 	virtual void Initialize(BulletFactory* bulletFactory) = 0;
 	// 発射する
-	virtual void Shoot(const DX::StepTimer& timer, int& bulletNum, DirectX::SimpleMath::Vector2& position, float angle) = 0;
+	virtual void Shoot(const DX::StepTimer& timer,DirectX::SimpleMath::Vector2& position, float angle) = 0;
 	// 後始末をする
 	virtual void Finalize() = 0;
 };
 
-class Normal : public Weapon {
+class Normal : public Weapon 
+{
 public:
 	// コンストラクタ
 	Normal(Air* air);
 	// 初期化する
 	void Initialize(BulletFactory* bulletFactory) override;
 	// 弾を発射する
-	void Shoot(const DX::StepTimer& timer, int& bulletNum, DirectX::SimpleMath::Vector2& position, float angle) override ;
+	void Shoot(const DX::StepTimer& timer,DirectX::SimpleMath::Vector2& position, float angle) override ;
 	// 後始末をする
 	void Finalize() override;
 
@@ -40,14 +43,15 @@ private:
 	BulletFactory* bulletFactory;
 };
 
-class NWay : public Weapon {
+class NWay : public Weapon 
+{
 public:
 	// コンストラクタ
 	NWay(Air* air);
 	// 初期化する
 	void Initialize(BulletFactory* bulletFactory) override;
 	// 弾を発射する
-	void Shoot(const DX::StepTimer& timer, int& bulletNum, DirectX::SimpleMath::Vector2& position, float angle) override;
+	void Shoot(const DX::StepTimer& timer,DirectX::SimpleMath::Vector2& position, float angle) override;
 	// 後始末をする
 	void Finalize() override;
 
@@ -59,14 +63,15 @@ private:
 };
 
 
-class Bomb : public Weapon {
+class Bomb : public Weapon 
+{
 public:
 	// コンストラクタ
 	Bomb(Air* air);
 	// 初期化する
 	void Initialize(BulletFactory* bulletFactory) override;
 	// 弾を発射する
-	void Shoot(const DX::StepTimer& timer, int& bulletNum, DirectX::SimpleMath::Vector2& position, float angle) override;
+	void Shoot(const DX::StepTimer& timer, DirectX::SimpleMath::Vector2& position, float angle) override;
 	// 後始末をする
 	void Finalize() override;
 

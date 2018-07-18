@@ -6,7 +6,8 @@
 #include <WICTextureLoader.h>
 #include "Bullet.h"
 
-class BulletFactory {
+class BulletFactory 
+{
 public:
 	// íeêî Bullet number
 	static const int BULLET_NUM = 1000;

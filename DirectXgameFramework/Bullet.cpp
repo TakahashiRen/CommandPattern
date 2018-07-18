@@ -10,16 +10,17 @@ using namespace Microsoft::WRL;
 const Vector2 Bullet::SPEED(4.0f, 0.0f);
 
 // コンストラクタ Constructor
-Bullet::Bullet() : alive(false), angle(0.0f), position(0.0f, 0.0f){
-}
+Bullet::Bullet() : alive(false), angle(0.0f), position(0.0f, 0.0f){}
 
 // 初期化する
-void Bullet::Initialize(Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>& texture) {
+void Bullet::Initialize(ID3D11ShaderResourceView* texture) 
+{
 	this->texture = texture;
 }
 
 // Bulletオブジェクトを更新する Update Bullet object 
-void Bullet::Update(const DX::StepTimer& timer) {
+void Bullet::Update(const DX::StepTimer& timer) 
+{
 	// 弾を回転する Rotate bullet object
 	Matrix rotation = Matrix::CreateRotationZ(this->angle);
 	// 速度を計算する Calculate bullet velocity
@@ -29,13 +30,12 @@ void Bullet::Update(const DX::StepTimer& timer) {
 }
 
 // Bulletオブジェクトを描画する Render Bullet object 
-void Bullet::Render(DirectX::SpriteBatch* spriteBatch) {
+void Bullet::Render(DirectX::SpriteBatch* spriteBatch) 
+{
 	// スプライトを描画する
-	spriteBatch->Draw(this->texture.Get(), this->position, nullptr, Colors::Orange, angle + XMConvertToRadians(90.0f), Vector2(8.0f, 8.0f));
+	spriteBatch->Draw(this->texture, this->position, nullptr, Colors::Orange, angle + XMConvertToRadians(90.0f), Vector2(8.0f, 8.0f));
 }
 
 // Bulletオブジェクトの後処理をおこなう Finalize Bullet object
-void Bullet::Finalize() {
-	//this->texture.Reset();
-}
+void Bullet::Finalize() {}
 

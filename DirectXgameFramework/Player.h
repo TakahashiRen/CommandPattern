@@ -13,6 +13,7 @@
 #include <algorithm>
 #include <Memory>
 #include <Keyboard.h>
+#include <queue>
 #include "StepTimer.h"
 #include "dx.h"
 
@@ -24,12 +25,13 @@
 
 #include "BulletFactory.h"
 #include "Air.h"
-#include "Command.h"
 #include "Weapon.h"
-
+#include "InputHandler.h"
+#include "Command.h"
 
 // プレイヤクラス
-class Player {
+class Player 
+{
 public:
 	// コンストラクタ
 	Player(Air* air);
@@ -44,25 +46,27 @@ public:
 
 private:
 	// テクスチャ Texture
-	Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> texture;
+	//Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> texture;
 
 	// キーボード Keyboard
 	std::unique_ptr<DirectX::Keyboard> keyboard;
 	// キーボードステートトラッカオブジェクト KeyboardStateTracker
 	std::unique_ptr<DirectX::Keyboard::KeyboardStateTracker> keyboardTracker;
+
 	// Tankオブジェクトへのポインタ Tank object
 	std::unique_ptr<Tank> tank;
 
-	// Moveオブジェクトへのポインタ Move object
-	//std::unique_ptr<Move> move;
-	// Turnオブジェクトへのポインタ Turn object
-	//std::unique_ptr<Turn> turn;
-	Air* air;
-	// Bulletの飛行弾数
-	int* bulletNum;
+	//弾のファクトリー
+	std::unique_ptr<BulletFactory> bulletFactory;
 
-	TankCommand* command;
-	BulletCommand* bCommand;
+	//弾管理クラスのポインタ
+	Air* air;
+
+	//入力管理クラス
+	std::unique_ptr<InputHandler> inputHandler;
+
+	//実行コマンドのキュー
+	std::queue<ICommand*> command;
 };
 
 #endif // PLAYER_DEFINED

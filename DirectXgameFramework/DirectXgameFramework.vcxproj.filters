@@ -17,6 +17,33 @@
     <Filter Include="Source">
       <UniqueIdentifier>{2219d638-76a0-4556-a088-91b88f1283ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\TankParts">
+      <UniqueIdentifier>{b952ea6d-258a-4077-8e1f-b4ad5229d85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Factory">
+      <UniqueIdentifier>{1ab1dcdd-ed42-4cbe-a647-bbd8159d1625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Player">
+      <UniqueIdentifier>{ee69e9e7-fad7-4a69-9db2-5f248ffb7822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Player\PlayerCommand">
+      <UniqueIdentifier>{a25270ed-f1ff-4c6f-b69b-60c721ec9fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Bullet">
+      <UniqueIdentifier>{4384e0e6-0314-4cf9-98df-23eadaf7efb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Player">
+      <UniqueIdentifier>{731cb1d1-f3ec-4493-aba8-7cc055fd6185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\TankParts">
+      <UniqueIdentifier>{d77c32d8-5d05-4b29-ae1c-584fe0e47fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Factory">
+      <UniqueIdentifier>{75a4381f-2fc5-4950-be96-590ae0c988aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Bullet">
+      <UniqueIdentifier>{e17ed036-29c3-4c5d-8900-de4e10e2c956}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -34,41 +61,44 @@
     <ClInclude Include="StepTimer.h">
       <Filter>Framework Header</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Body.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Tank.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="TankFactory.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="MyGame.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Turret.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Cannon.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletFactory.h">
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Air.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Weapon.h">
-      <Filter>Header</Filter>
+    <ClInclude Include="Body.h">
+      <Filter>Header\TankParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>Header\TankParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Turret.h">
+      <Filter>Header\TankParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Cannon.h">
+      <Filter>Header\TankParts</Filter>
     </ClInclude>
     <ClInclude Include="Command.h">
-      <Filter>Header</Filter>
+      <Filter>Header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletFactory.h">
+      <Filter>Header\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="TankFactory.h">
+      <Filter>Header\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>Header\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,50 +111,71 @@
     <ClCompile Include="Window.cpp">
       <Filter>Framework Source</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Body.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="TankFactory.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="MyGame.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Turret.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Cannon.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="BulletFactory.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Air.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Normal.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Turret.cpp">
+      <Filter>Source\TankParts</Filter>
     </ClCompile>
-    <ClCompile Include="Bomb.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Cannon.cpp">
+      <Filter>Source\TankParts</Filter>
     </ClCompile>
-    <ClCompile Include="NWay.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Body.cpp">
+      <Filter>Source\TankParts</Filter>
     </ClCompile>
-    <ClCompile Include="TankCommand.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="TankFactory.cpp">
+      <Filter>Source\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletFactory.cpp">
+      <Filter>Source\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source\Player</Filter>
     </ClCompile>
     <ClCompile Include="BulletCommand.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="NWay.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Normal.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandShotNWay.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandShotBomb.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandShotNormal.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandTurnRight.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandTurnLeft.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveForward.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveBackward.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>Source\Player\PlayerCommand</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
