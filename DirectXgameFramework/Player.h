@@ -45,9 +45,6 @@ public:
 	void Finalize();
 
 private:
-	// テクスチャ Texture
-	//Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> texture;
-
 	// キーボード Keyboard
 	std::unique_ptr<DirectX::Keyboard> keyboard;
 	// キーボードステートトラッカオブジェクト KeyboardStateTracker

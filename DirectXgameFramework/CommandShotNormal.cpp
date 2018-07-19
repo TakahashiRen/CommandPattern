@@ -23,5 +23,6 @@ void CommandShotNormal::Execute(const DX::StepTimer& timer, DirectX::Keyboard* k
 // ŒãŽn––‚ð‚·‚é
 void CommandShotNormal::Finalize()
 {
+	normal->Finalize();
 	normal.reset();
 }

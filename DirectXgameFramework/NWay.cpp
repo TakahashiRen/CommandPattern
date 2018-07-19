@@ -51,4 +51,8 @@ void NWay::Shoot(const DX::StepTimer& timer,DirectX::SimpleMath::Vector2& positi
 }
 
 // ŒãŽn––‚ð‚·‚é
-void NWay::Finalize() {}
+void NWay::Finalize() 
+{
+	this->air = nullptr;
+	this->bulletFactory = nullptr;
+}

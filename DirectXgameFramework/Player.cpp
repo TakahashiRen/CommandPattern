@@ -83,6 +83,11 @@ void Player::Finalize()
 	// KeyboardTrackerオブジェクトをリセットする
 	this->keyboardTracker.reset();
 
-	bulletFactory->Initialize();
+	//入力管理クラスをリセット
+	inputHandler->Finalize();
+	inputHandler.reset();
+
+	//弾ファクトリーのリセット
+	bulletFactory->Finalize();
 	bulletFactory.reset();
 }

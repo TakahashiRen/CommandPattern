@@ -9,6 +9,8 @@
 // 2017/07/11  Modify initializing order of objects
 
 #define _CRTDBG_MAP_ALLOC
+#include <vld.h>
+
 #include <stdlib.h>
 #include <crtdbg.h>
 

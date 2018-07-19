@@ -39,4 +39,8 @@ void Bomb::Shoot(const DX::StepTimer& timer, DirectX::SimpleMath::Vector2& posit
 }
 
 // ŒãŽn––‚ð‚·‚é
-void Bomb::Finalize(){}
+void Bomb::Finalize()
+{
+	this->air = nullptr;
+	this->bulletFactory = nullptr;
+}

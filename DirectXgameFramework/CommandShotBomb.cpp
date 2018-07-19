@@ -23,5 +23,6 @@ void CommandShotBomb::Execute(const DX::StepTimer& timer, DirectX::Keyboard* key
 // ŒãŽn––‚ð‚·‚é
 void CommandShotBomb::Finalize()
 {
+	bomb->Finalize();
 	bomb.reset();
 }

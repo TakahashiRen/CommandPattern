@@ -62,3 +62,28 @@ std::queue<ICommand*> InputHandler::HandleInput(const DX::StepTimer & timer, Dir
 
 	return que;
 }
+
+void InputHandler::Finalize()
+{
+	command_A->Finalize();
+	delete command_A;
+	command_A = nullptr;
+	command_D->Finalize();
+	delete command_D;
+	command_D = nullptr;
+	command_S->Finalize();
+	delete command_S;
+	command_S = nullptr;
+	command_W->Finalize();
+	delete command_W;
+	command_W = nullptr;
+	command_Z->Finalize();
+	delete command_Z;
+	command_Z = nullptr;
+	command_X->Finalize();
+	delete command_X;
+	command_X = nullptr;
+	command_SPACE->Finalize();
+	delete command_SPACE;
+	command_SPACE = nullptr;
+}

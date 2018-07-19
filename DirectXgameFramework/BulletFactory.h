@@ -10,7 +10,7 @@ class BulletFactory
 {
 public:
 	// 弾数 Bullet number
-	static const int BULLET_NUM = 1000;
+	static const int BULLET_NUM = 10;
 	static const int BULLET_SIZE = 16;
 
 	// コンストラクタ Constructor

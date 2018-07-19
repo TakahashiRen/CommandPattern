@@ -15,7 +15,8 @@ public:
 	void SetCommandState(Air* air, BulletFactory* bulletFac);
 	//実行コマンドを取得し、返す
 	std::queue<ICommand*> HandleInput(const DX::StepTimer& timer,DirectX::Keyboard* keyboard,Tank* tank);
-
+	//終了処理
+	void Finalize();
 private:
 	//プレイヤーから渡される情報
 	//基本的にそのまま各種コマンドに渡される

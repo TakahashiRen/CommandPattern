@@ -30,7 +30,7 @@ void Air::Update(const StepTimer& timer)
 			// •`‰æ‹«ŠE‚ð‰z‚¦‚½”ò’e‚ðÄ—˜—p‚É‚·‚é
 			(*ite)->Alive(false);
 			ite = bullets.erase((ite));
-			ite--;
+			if (ite == bullets.end()) break;
 		}
 		// ”ò’e‚ª¶‘¶‚µ‚½ê‡
 		if ((*ite)->Alive())

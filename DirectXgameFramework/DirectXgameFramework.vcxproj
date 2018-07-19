@@ -70,8 +70,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\DirectXTK\Inc;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\DirectXTK\Bin\Desktop_2015\Win32\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Visual Leak Detector\include;C:\DirectXTK\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;C:\DirectXTK\Bin\Desktop_2015\Win32\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -91,13 +91,13 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>C:\DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>DirectXTK.lib;d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vld.lib;DirectXTK.lib;d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\DirectXTK\Bin\Desktop_2015\Win32\Debug;C:\DirectXTK\Bin\Desktop_2017\Win32\Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

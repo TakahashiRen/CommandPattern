@@ -44,5 +44,9 @@ void Normal::Shoot(const DX::StepTimer& timer, DirectX::SimpleMath::Vector2& pos
 }
 
 // ŒãŽn––‚ð‚·‚é
-void Normal::Finalize() {}
+void Normal::Finalize() 
+{
+	this->air = nullptr;
+	this->bulletFactory = nullptr;
+}
 

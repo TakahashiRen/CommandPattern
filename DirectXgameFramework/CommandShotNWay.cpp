@@ -11,17 +11,21 @@ CommandShotNWay::CommandShotNWay(Air* air, BulletFactory* bul)
 	nway = std::make_unique<NWay>(air);
 	nway->Initialize(bulletFactory);
 }
+
 // ‰Šú‰»‚·‚é
 void CommandShotNWay::Initialize()
 {
 }
+
 // ŽÀs‚·‚é
 void CommandShotNWay::Execute(const DX::StepTimer& timer, DirectX::Keyboard* keyboard, Tank* tank)
 {
 	nway->Shoot(timer, tank->Position(), tank->TurretAngle());
 }
+
 // ŒãŽn––‚ð‚·‚é
 void CommandShotNWay::Finalize()
 {
+	nway->Finalize();
 	nway.reset();
 }
